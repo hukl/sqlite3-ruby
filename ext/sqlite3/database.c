@@ -14,9 +14,9 @@ static void deallocate(void * ctx)
   sqlite3_stmt * stmt;
 
   if(db) {
-    while((stmt = sqlite3_next_stmt(db, NULL)) != NULL) {
-      sqlite3_finalize(stmt);
-    }
+    //while((stmt = sqlite3_next_stmt(db, NULL)) != NULL) {
+    //  sqlite3_finalize(stmt);
+    //}
     sqlite3_close(db);
   }
   xfree(c);
